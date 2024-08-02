@@ -24,11 +24,12 @@ public class Main {
                 .password("1234")
                 .build();
         userDao.save(user);
-        userDao.get(1L).ifPresent(System.out::println);
+//        userDao.get(1L).ifPresent(System.out::println);
 
         OrderDao orderDao = new OrderDao();
         Order order = Order.builder()
                 .orderDate(LocalDate.now())
+                .owner(user)
                 .build();
         orderDao.save(order);
         orderDao.get(1L).ifPresent(System.out::println);
