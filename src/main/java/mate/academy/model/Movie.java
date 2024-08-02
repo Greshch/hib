@@ -1,4 +1,4 @@
-package com.dev.entity;
+package mate.academy.model;
 
 import lombok.*;
 
