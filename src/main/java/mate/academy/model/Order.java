@@ -20,6 +20,6 @@ public class Order {
 
     private LocalDate orderDate;
 
-    @ManyToOne
-    private User owner;
+//    @ManyToOne
+//    private User owner;
 }
