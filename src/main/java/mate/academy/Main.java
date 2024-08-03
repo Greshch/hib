@@ -24,8 +24,7 @@ public class Main {
                 .orderDate(LocalDate.now())
                 .build();
         orderDao.save(order);
-        Optional<Order> order1 = orderDao.get(1L);
-//        orderDao.get(1L).ifPresent(System.out::println);
+//        System.out.println(order);
 
         UserDao userDao = new UserDao();
         User user = User.builder()
@@ -34,5 +33,6 @@ public class Main {
                 .orders(List.of(order))
                 .build();
         userDao.save(user);
+        System.out.println(user);
     }
 }
